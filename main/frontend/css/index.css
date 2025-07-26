@@ -1,0 +1,30 @@
+h1{
+    color: white;
+    font-size: 70px;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+button{
+    color: white;
+    font-size: x-large;
+    text-align: center;
+    margin: 10px auto;
+    border: 3px solid var(--color2);
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 200ms ease;
+    
+}
+
+main div{
+    display: flex;
+    flex-direction: column;
+}
+
+button:hover{
+    transform: scale(1.2);
+
+}

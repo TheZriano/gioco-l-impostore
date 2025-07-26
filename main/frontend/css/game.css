@@ -1,0 +1,44 @@
+h1, h2{
+    color: white;
+    font-size: xx-large;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+h2{
+    padding: 0;
+    color: green;
+}
+button{
+    color: white;
+    font-size: large;
+    text-align: center;
+    margin: 10px auto;
+    border: 3px solid var(--color2);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 200ms ease;
+    
+}
+
+main div{
+    display: flex;
+    flex-direction: column;
+}
+
+button:hover{
+    transform: scale(1.2);
+
+}
+div div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: min(600px, 80%);
+    margin: 0 auto;
+    gap: 20px;
+
+}
