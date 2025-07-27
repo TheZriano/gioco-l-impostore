@@ -20,7 +20,7 @@ a{
     color: white;
 }
 header{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 80px;

@@ -1,6 +1,3 @@
-//const socket = new WebSocket(`${window.location.protocol === 'https:' ? 'wss' : 'ws'}://${window.location.host}`);
-//socket.send(JSON.stringify({ type: 'register', name:owner, game:data.gameId }));
-
 
 
 function newGame(){

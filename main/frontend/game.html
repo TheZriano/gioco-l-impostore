@@ -12,7 +12,7 @@
         <a href="/"><img src="static/logo.jpg" class="header-logo"></a>
     </header>
 
-    <main>
+    <main id="main">
         <div>
             <h1 id="game_code">#123456</h1>
             <div>
@@ -22,12 +22,13 @@
                 <button>you</button>
                 <button>nome1</button>
             </div>
-            <button onclick="showCard()">Mostra Parola</button>
+            <button onclick="showWord()" id="show-button">Mostra Parola <p id="new-text">Nuovo</p></button>
         </div>
 
         <div id="word-card">
             <h1>La Parola è...</h1>    <!-- finrie da qua-->
-            <h2>parola</h2>
+            <h2 id="word">parola</h2>
+            <button onclick="hideWord()">Chiudi</button>
         </div>
         
     </main>

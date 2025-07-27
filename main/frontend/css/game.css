@@ -5,6 +5,7 @@ h1, h2{
     text-align: center;
     padding-top: 40px;
     padding-bottom: 10px;
+    white-space:nowrap;
 }
 
 h2{
@@ -41,4 +42,38 @@ div div{
     margin: 0 auto;
     gap: 20px;
 
+}
+
+#word-card{
+    display: none;
+    position: fixed;
+    top: 150px;
+    width: fit-content;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 10px auto;
+    border: 3px solid var(--color2);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--color1);
+}
+#word-card h1{
+    padding-top: 10px;
+}
+
+#show-button{
+    width: 100px;
+    position: relative;
+    margin-top: 30px;
+}
+
+#show-button p{
+    position: absolute;
+    top: -15;
+    left:-10 ;
+    background-color: var(--color3);
+    padding: 3px;
+    border-radius: 100px;
+    
 }
