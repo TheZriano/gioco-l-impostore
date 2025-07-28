@@ -3,13 +3,21 @@
 const { Pool } = require("pg");
 require("dotenv").config();
 
-const pool = new Pool({
+let pool
+if (process.env.DB_URL){
+  pool = new Pool({
+  connectionString:process.env.DB_URL         // Es. 5432
+});
+}else{
+  pool = new Pool({
   user: process.env.DB_USER,         // Es. 'postgres'
   host: process.env.DB_HOST,         // Es. 'localhost'
   database: process.env.DB_NAME,     // Es. 'miodb'
   password: process.env.DB_PASSWORD, // Es. 'password123'
   port: process.env.DB_PORT,         // Es. 5432
 });
+}
+
 
 
 async function query(text, params) {
