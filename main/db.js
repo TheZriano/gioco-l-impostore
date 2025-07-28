@@ -21,7 +21,7 @@ function generateSixDigitCode() {
 async function createGame(ownerName) {
   try {
     const code=generateSixDigitCode()
-    const res = await db.query("INSERT INTO games (owner, code, players, status) VALUES ($1, $2, $3, 'lobby')", [ownerName, code, JSON.stringify([ownerName])]);
+    const res = await db.query("INSERT INTO games (owner, code, players) VALUES ($1, $2, $3)", [ownerName, code, JSON.stringify([ownerName])]);
     return code;
   } catch (err) {
     if (err.code === '23505') {
