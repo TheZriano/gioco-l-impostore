@@ -1,0 +1,21 @@
+h1{
+    color: white;
+    font-size: 70px;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    max-width: 90%;
+    color: var(--color3);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button:hover{
+    transform: scale(1.2);
+
+}

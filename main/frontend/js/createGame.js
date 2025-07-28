@@ -21,7 +21,7 @@ function newGame(){
     return response.json();
     })
     .then(data => {
-        window.location.href=`/game?id=${data.gameId}&nome=${owner}`
+        window.location.href=`/game?id=${data.gameId}&name=${owner}`
     })
     .catch(error => {
         console.error('Errore:', error);
