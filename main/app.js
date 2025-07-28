@@ -1,13 +1,10 @@
 const express=require("express");
 require('dotenv').config({ path: __dirname + '/.env' });
-const jwt =require("jsonwebtoken");
-const cookieParser=require("cookie-parser");
 const path =require("path");
 const cors=require("cors");
-const fs = require("fs").promises;
 const db = require("./db.js")
 const http = require("http")
-const translate = require('@vitalets/google-translate-api');
+
 
 const PORT=process.env.PORT || 3000
 
@@ -15,7 +12,6 @@ const PORT=process.env.PORT || 3000
 const app =express();
 
 app.use(express.json());
-app.use(cookieParser());
 app.use(cors({origin:`http://localhost:${PORT}` , credentials: true}));
 app.use(express.static(path.join(__dirname, "frontend")));
 
@@ -94,6 +90,11 @@ app.get("/game", async (req, res) => {
 //error
 app.get("/error", async (req, res) => {
   res.sendFile(path.join(__dirname, "frontend", "error.html"));
+});
+
+//schermata /joinGame
+app.get("/joinGame", async (req, res) => {
+  res.sendFile(path.join(__dirname, "frontend", "joinGame.html"));
 });
 
 //* API
